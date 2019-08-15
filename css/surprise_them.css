@@ -25,6 +25,7 @@ h4 {
   color: #fff;
   padding: 100px 25px;
   font-family: Montserrat, sans-serif;
+  margin-bottom: 0;
 }
 
 .container-fluid {
@@ -239,6 +240,17 @@ footer .glyphicon {
   top: -2px;
 }
 
+#team .thumbnail {
+  background-color: #f6f6f6;
+  padding-top: 10px;
+}
+
+#team .thumbnail img {
+  width: 50%;
+  border: 10px solid #fff;
+  border-radius: 100px;
+}
+
 @keyframes slide {
   0% {
     opacity: 0;
@@ -275,7 +287,7 @@ footer .glyphicon {
   }
 
   .navbar #myNavbar {
-    background-color: #f4511e !important;
+    background-color: #c9a575 !important;
   }
 }
 
