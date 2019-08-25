@@ -22,6 +22,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <script src="./js/surprise_them.js"></script>
+    <script src="./Carousel/dist/owl.carousel.min.js"></script>
+    <link href="./Carousel/dist/assets/owl.carousel.min.css" rel="stylesheet" type="text/css" />
+    <link href="./Carousel/dist/assets/owl.theme.default.min.css" rel="stylesheet" type="text/css" />
     <link href="./css/surprise_them.css" rel="stylesheet" type="text/css" />
   </head>
 
@@ -110,29 +113,48 @@
       <h2>Portfolio</h2>
       <br />
       <h4>What we have created</h4>
-      <div class="row text-center slideanim">
-        <div class="col-sm-4">
+      <div class="row text-center slideanim owl-carousel">
+        <div>
           <div class="thumbnail">
-            <img src="./images/work-1.jpg" alt="Love" />
-            <p><strong>Love</strong></p>
-            <p>Yes, we built Love Contents</p>
+            <img src="./images/art-1.jpg" alt="Love" />
+            <p><strong>Handsketch art</strong></p>
           </div>
         </div>
-        <div class="col-sm-4">
+        <div>
+          <div class="thumbnail">
+            <img src="./images/art-2.jpg" alt="Love" />
+            <p><strong>Digital arts</strong></p>
+          </div>
+        </div>
+        <div>
           <div class="thumbnail">
             <img src="./images/work-2.jpg" alt="Motivation" />
             <p><strong>Motivation</strong></p>
             <p>We built Motivation Content</p>
           </div>
         </div>
-        <div class="col-sm-4">
+        <div>
           <div class="thumbnail">
             <img src="./images/work-3.jpg" alt="Common" />
             <p><strong>Common</strong></p>
             <p>Yes, image is ours</p>
           </div>
         </div>
+        <div>
+          <div class="thumbnail">
+            <img src="./images/work-1.jpg" alt="Common" />
+            <p><strong>Common</strong></p>
+            <p>Yes, image is ours</p>
+          </div>
+        </div>
+        <div>
+          <div class="thumbnail">
+            <img src="./images/work-4.jpg" alt="Common" />
+            <p><strong>Ancient format personalized</strong></p>
+          </div>
+        </div>
       </div>
+      
       <br />
 
       <h2>What our customers say</h2>
@@ -395,6 +417,24 @@
       });
 
       $(document).ready(function() {
+        $('.owl-carousel').owlCarousel({
+          loop: true,
+          margin: 10,
+          autoplay: true,
+          autoplayTimeout: 1000,
+          autoplayHoverPause: true,
+          responsive: {
+            0: {
+              items: 1
+            },
+            600: {
+              items: 3
+            },
+            1000: {
+              items: 3
+            }
+          }
+        })
         // Add smooth scrolling to all links in navbar + footer link
         $(".navbar a, footer a[href='#myPage']").on("click", function(event) {
           // Make sure this.hash has a value before overriding default behavior
